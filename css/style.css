@@ -96,6 +96,7 @@ main {
 form {
 	position: relative;
 	box-shadow: 0 16px 30px -10px rgb(70, 96, 187, 0.19);
+	margin-bottom: 16px;
 }
 
 form input {
@@ -113,10 +114,17 @@ form input::placeholder {
 	font-size: 13px;
 	color: var(--dark-blue);
 	line-height: 25px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
+/* ::placeholder {
+	overflow: hidden;
+	text-overflow: ellipsis;
+} */
+
 form input[type="text"] {
-	font-size: 18px;
+	font-size: 14px;
 	color: var(--darker-blue);
 	font-family: "Space Mono", monospace;
 }
@@ -159,6 +167,12 @@ form button:hover {
 }
 /* /form */
 
+/* box-wrap */
+.box-wrap {
+	background-color: white;
+}
+
+/* /box-wrap */
 footer {
 	margin: 0 auto;
 	display: flex;
