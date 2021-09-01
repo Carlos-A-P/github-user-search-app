@@ -6,7 +6,9 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <title>CPWD | GitHub user search app</title>
 </head>
 <body>
@@ -16,15 +18,20 @@
     </div>
     <div class="theme">
       <div class="setting">
-        <p class="light">Light</p>
+        <!-- <p class="light">Light</p> -->
         <p class="dark">Dark</p>
       </div>
-      <div class="theme-icon"></div>
+      <div class="theme-icon">
+        <img src="assets/icon-moon.svg" alt="moon">
+        <!-- <img src="assets/icon-sun.svg" alt="sun"> -->
+      </div>
     </div>
   </header>
   <main>
-    <form action="">
+    <form class="">
       <input type="text" name="username" id="username" placeholder="Search GitHub username...">
+      <span>No results</span>
+      <img src="assets/icon-search.svg" alt="search">
       <button type="submit">Search</button>
     </form>
     <div class="box-wrap">
@@ -32,24 +39,24 @@
         <div class="profile-picture"></div>
         <div class="user-info">
           <h2>The Octocat</h2>
-          <p class="user">@octocat</p>
+          <h3 class="user">@octocat</h3>
           <p class="joined">Joined 25 Jan 2011</p>
         </div>
       </div>
-      <div class="user-description">
+      <div class="bio">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quisquam delectus nostrum.</p>
       </div>
       <div class="stats">
         <div class="stat-1">
-          <p>repos</p>
+          <h4>repos</h4>
           <small>8</small>
         </div>
         <div class="stat-2">
-          <p>Followers</p>
+          <h4>Followers</h4>
           <small>3938</small>
         </div>
         <div class="stat-3">
-          <p>repos</p>
+          <h4>Following</h4>
           <small>9</small>
         </div>
       </div>

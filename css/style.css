@@ -1,0 +1,166 @@
+:root {
+	/* lightmode colors */
+	--light-blue: rgb(0, 121, 255);
+	--dark-grey: rgb(105, 124, 154);
+	--dark-blue: rgb(75, 106, 155);
+	--darker-blue: #2b3442;
+	--light-grey: rgb(246, 248, 255);
+	--white: white;
+
+	/* darkmode colors*/
+	--light-blue: rgb(0, 121, 255);
+	--white: white;
+	--dark-navy: rgb(20, 29, 47);
+	--navy: rgb(30, 42, 71);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Space Mono", monospace;
+	background-color: var(--light-grey);
+	padding: 31px 24px;
+}
+
+h1 {
+	font-size: 26px;
+}
+
+h2 {
+	font-size: 22px;
+}
+
+h3 {
+	font-size: 16px;
+	line-height: 33px;
+}
+
+h4 {
+	font-size: 13px;
+	line-height: 20px;
+}
+
+.bio {
+	font-size: 15px;
+	line-height: 25px;
+}
+
+/* header */
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 730px;
+	margin-bottom: 36px;
+}
+
+.theme {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.theme:hover {
+	filter: brightness(0%);
+}
+
+.setting p {
+	font-weight: bold;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+}
+
+.dark p {
+	color: var(--dark-blue);
+}
+
+.theme-icon {
+	margin-top: 10px;
+}
+
+/* /header */
+
+main {
+	margin: 0 auto;
+	max-width: 730px;
+}
+
+/* form */
+form {
+	position: relative;
+	box-shadow: 0 16px 30px -10px rgb(70, 96, 187, 0.19);
+}
+
+form input {
+	outline: 0;
+	border: 0;
+	height: 60px;
+	border-radius: 15px;
+	padding: 18px 98px 17px 45px;
+	caret-color: var(--light-blue);
+	width: 100%;
+	max-width: 730px;
+}
+
+form input::placeholder {
+	font-size: 13px;
+	color: var(--dark-blue);
+	line-height: 25px;
+}
+
+form input[type="text"] {
+	font-size: 18px;
+	color: var(--darker-blue);
+	font-family: "Space Mono", monospace;
+}
+
+form span {
+	display: none;
+}
+
+form.error span {
+	color: red;
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 45px;
+	display: block;
+}
+
+form img {
+	position: absolute;
+	left: 16px;
+	top: 20px;
+}
+
+form button {
+	position: absolute;
+	right: 7px;
+	top: 6.5px;
+	outline: 0;
+	border: 0;
+	height: 46px;
+	width: 84px;
+	background: var(--light-blue);
+	border-radius: 10px;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+form button:hover {
+	background-color: #60abff;
+}
+/* /form */
+
+footer {
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
