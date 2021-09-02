@@ -11,24 +11,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <title>CPWD | GitHub user search app</title>
 </head>
-<body>
+<body class="dark">
   <header>
     <div class="logo">
       <h1>devfinder</h1>
     </div>
     <div class="theme">
       <div class="setting">
-        <!-- <p class="light">Light</p> -->
-        <p class="dark">Dark</p>
-      </div>
-      <div class="theme-icon">
-        <img src="assets/icon-moon.svg" alt="moon">
-        <!-- <img src="assets/icon-sun.svg" alt="sun"> -->
+        <p class="light-setting">Light</p>
+        <p class="dark-setting">Dark</p>
       </div>
     </div>
   </header>
   <main>
-    <form class="">
+    <form class="error">
       <input type="text" name="username" id="username" placeholder="Search GitHub username...">
       <span>No results</span>
       <img src="assets/icon-search.svg" alt="search">
@@ -40,8 +36,10 @@
           <img src="https://source.unsplash.com/random/70x70" alt="profile picture">
         </div>
         <div class="user-info">
-          <h2>The Octocat</h2>
+          <div class="left">
+            <h2>The Octocat</h2>
           <h3 class="user">@octocat</h3>
+          </div>
           <p class="joined">Joined 25 Jan 2011</p>
         </div>
       </div>
@@ -50,33 +48,33 @@
       </div>
       <div class="stats">
         <div class="stat-1">
-          <h4>repos</h4>
-          <small>8</small>
+          <h4>Repos</h4>
+          <div class="stat-num">8</div>
         </div>
         <div class="stat-2">
           <h4>Followers</h4>
-          <small>3938</small>
+          <div class="stat-num">3938</div>
         </div>
         <div class="stat-3">
           <h4>Following</h4>
-          <small>9</small>
+          <div class="stat-num">9</div>
         </div>
       </div>
       <div class="social">
-        <div class="location">
-          <div class="location-icon"></div>
+        <div class="link location">
+          <div><img src="assets/icon-location.svg" alt="location"></div>
           <p>San Francisco</p>
         </div>
-        <div class="link">
-          <div class="link-icon"></div>
+        <div class="link cite">
+          <div><img src="assets/icon-website.svg" alt="website"></div>
           <p>https://github.blog</p>
         </div>
-        <div class="twitter">
-          <div class="location-icon"></div>
-          <p>San Francisco</p>
+        <div class="link twitter unavailable">
+          <div><img src="assets/icon-twitter.svg" alt="twitter"></div>
+          <p>Not Available</p>
         </div>
-        <div class="name">
-          <div class="name-icon"></div>
+        <div class="link company">
+          <div><img src="assets/icon-company.svg" alt="company"></div>
           <p>@github</p>
         </div>
       </div>

@@ -25,25 +25,11 @@
 body {
 	font-family: "Space Mono", monospace;
 	background-color: var(--light-grey);
-	padding: 31px 24px;
+	padding: 31px 24px 0;
 }
 
 h1 {
 	font-size: 26px;
-}
-
-h2 {
-	font-size: 22px;
-}
-
-h3 {
-	font-size: 16px;
-	line-height: 33px;
-}
-
-h4 {
-	font-size: 13px;
-	line-height: 20px;
 }
 
 .bio {
@@ -55,15 +41,32 @@ h4 {
 header {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	margin: 0 auto;
-	max-width: 730px;
+	max-width: 375px;
 	margin-bottom: 36px;
 }
 
-.theme {
+.setting .dark-setting {
 	display: flex;
+}
+
+.setting .light-setting {
+	display: none;
+}
+
+.setting p {
 	align-items: center;
-	gap: 16px;
+}
+
+.dark-setting::after {
+	content: url(../assets/icon-moon.svg);
+}
+
+.dark-setting::after,
+.light-setting::after {
+	margin-left: 16px;
+	margin-top: 8px;
 }
 
 .theme:hover {
@@ -81,15 +84,11 @@ header {
 	color: var(--dark-blue);
 }
 
-.theme-icon {
-	margin-top: 10px;
-}
-
 /* /header */
 
 main {
 	margin: 0 auto;
-	max-width: 730px;
+	max-width: 375px;
 }
 
 /* form */
@@ -107,7 +106,7 @@ form input {
 	padding: 18px 98px 17px 45px;
 	caret-color: var(--light-blue);
 	width: 100%;
-	max-width: 730px;
+	max-width: 375px;
 }
 
 form input::placeholder {
@@ -133,12 +132,19 @@ form span {
 	display: none;
 }
 
+form.error {
+	margin-bottom: 30px;
+}
+
 form.error span {
+	position: absolute;
 	color: red;
 	font-size: 14px;
 	font-weight: bold;
-	margin-left: 45px;
+	left: 45px;
+	bottom: -25px;
 	display: block;
+	z-index: 1;
 }
 
 form img {
@@ -167,14 +173,313 @@ form button:hover {
 }
 /* /form */
 
-/* box-wrap */
+/* box-wrap header */
 .box-wrap {
 	background-color: white;
+	padding: 32px 24px;
+	border-radius: 15px;
+	box-shadow: 0 16px 30px -10px rgb(70, 96, 187, 0.19);
 }
 
-/* /box-wrap */
+.box-header {
+	display: flex;
+	gap: 19px;
+	margin-bottom: 33px;
+}
+
+.profile-picture img {
+	border-radius: 50%;
+	width: 70px;
+}
+
+h2 {
+	font-size: 16px;
+}
+
+h3 {
+	font-size: 13px;
+	/* line-height: 33px; */
+	color: var(--light-blue);
+}
+
+p.joined {
+	font-size: 13px;
+	color: var(--dark-grey);
+	margin-top: 5px;
+}
+/* /box-wrap header*/
+
+/* bio */
+.bio p {
+	color: var(--dark-blue);
+	font-size: 13px;
+	margin-bottom: 23px;
+}
+/* /bio */
+
+/* stats */
+.stats {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+	background-color: var(--light-grey);
+	padding: 18px 30px;
+}
+
+.stats div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h4 {
+	margin-bottom: 8px;
+	font-weight: 400;
+	color: var(--dark-blue);
+	font-size: 11px;
+	line-height: 20px;
+}
+
+.stat-num {
+	font-size: 16px;
+	font-weight: bold;
+}
+/* /stats */
+
+/* social */
+.social {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	margin-top: 24px;
+}
+
+.social .link {
+	display: flex;
+}
+
+.link div {
+	width: 20px;
+	margin-right: 13px;
+}
+
+/* /social */
+
 footer {
-	margin: 0 auto;
+	margin: 10vw auto 0;
 	display: flex;
 	justify-content: center;
+}
+
+/* -------------------DARK THEME */
+.dark,
+.dark .stats {
+	background-color: var(--dark-navy);
+}
+
+.dark form input,
+.dark .box-wrap {
+	background-color: var(--navy);
+	box-shadow: none;
+}
+
+.dark .setting .dark-setting {
+	display: none;
+}
+
+.dark .setting .light-setting {
+	display: flex;
+}
+
+.dark .light-setting::after {
+	content: url(../assets/icon-sun.svg);
+}
+
+.dark h1,
+.dark .setting p,
+.dark p,
+.dark h2,
+.dark h4,
+.dark .stat-num,
+.dark form input::placeholder,
+.dark form input[type="text"] {
+	color: white;
+}
+
+.dark .link div {
+	filter: brightness(100);
+}
+
+/* -------------------/DARK THEME */
+
+/* unavailable */
+.unavailable {
+	opacity: 0.3;
+}
+
+.dark .unavailable {
+	opacity: 0.7;
+}
+/* /unavailable */
+
+@media (min-width: 768px) {
+	body {
+		padding: 140px 97px 0;
+	}
+
+	main {
+		max-width: 573px;
+	}
+
+	.box-wrap {
+		padding: 40px;
+	}
+
+	/* form */
+	form input {
+		max-width: 573px;
+		height: 69px;
+		padding: 22px 125px 22px 80px;
+	}
+
+	form input::placeholder,
+	form input[type="text"] {
+		font-size: 18px;
+	}
+
+	form button {
+		top: 9.5px;
+		height: 50px;
+		width: 106px;
+	}
+
+	form img {
+		position: absolute;
+		left: 32px;
+		top: 23px;
+	}
+	/* /form */
+
+	/* header */
+	.box-header {
+		gap: 41px;
+		margin-bottom: 24px;
+		align-items: center;
+	}
+
+	header {
+		max-width: 573px;
+	}
+
+	.profile-picture img {
+		width: 117px;
+	}
+
+	h2 {
+		font-size: 26px;
+	}
+
+	h3 {
+		font-size: 16px;
+	}
+
+	p.joined {
+		font-size: 15px;
+	}
+	/* /header */
+
+	.bio p {
+		font-size: 15px;
+		margin-bottom: 32px;
+	}
+
+	/* stats */
+	.stats {
+		display: flex;
+		justify-content: flex-start;
+		padding: 15px 32px;
+	}
+
+	.stats div {
+		margin-right: 58px;
+		align-items: flex-start;
+	}
+
+	h4 {
+		font-size: 13px;
+		margin: 0;
+	}
+
+	.stat-num {
+		font-size: 22px;
+	}
+
+	/* /stats */
+
+	.bio,
+	.stats,
+	.social {
+		width: 480px;
+	}
+
+	.social {
+		margin-top: 30px;
+		display: grid;
+		grid-template-areas:
+			"location twitter"
+			"cite company";
+	}
+
+	.location {
+		grid-area: location;
+	}
+
+	.twitter {
+		grid-area: twitter;
+	}
+
+	.cite {
+		grid-area: cite;
+	}
+
+	.company {
+		grid-area: company;
+	}
+}
+
+@media (min-width: 936px) {
+	header,
+	main,
+	form input {
+		max-width: 730px;
+	}
+
+	.box-wrap {
+		padding: 48px;
+		display: flex;
+		flex-direction: column;
+		/* align-items: flex-end; */
+	}
+
+	.bio,
+	.stats,
+	.social {
+		align-self: flex-end;
+	}
+
+	.user-info {
+		display: flex;
+		justify-content: space-between;
+		width: -moz-available; /* WebKit-based browsers will ignore this. */
+		width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+		width: fill-available;
+	}
+
+	form.error span {
+		left: auto;
+		right: 140px;
+		bottom: 24px;
+		z-index: 1;
+	}
 }
