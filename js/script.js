@@ -45,7 +45,7 @@ form.addEventListener('submit', function(e){
     fetch('https://api.github.com/users/'+originalName)
     .then((result) => result.json())
     .then((data) => {
-        console.log(data)
+        // console.log(data)
         if (data.name === undefined){
             form.classList.add('error')
             return
@@ -107,13 +107,53 @@ form.addEventListener('submit', function(e){
     })
 })
 
-displayDate()
 function displayDate(date) {
-    let example = 'YYYY-MM-DDTHH:MM:SSZ'
-    console.log(example)
-    console.log(example.split('-'))
-    let newdate = example.split('-')
+    // let example = '2021-08-23THH:MM:SSZ'
+    let newdate = date.split('-')
     let year = newdate[0]
-    let month = newdate[1]
+    let monthNum = newdate[1]
+    let month
+    switch(parseInt(monthNum)){
+        case 01:
+            month = 'Jan'
+            break
+        case 02:
+            month = 'Feb'
+            break
+        case 03:
+            month = 'Mar'
+            break
+        case 04:
+            month = 'Apr'
+            break
+        case 05:
+            month = 'May'
+            break
+        case 06:
+            month = 'June'
+            break
+        case 07:
+            month = 'July'
+            break
+        case 08:
+            month = 'Aug'
+            break
+        case 09:
+            month = 'Sep'
+            break
+        case 10:
+            month = 'Oct'
+            break
+        case 11:
+            month = 'Nov'
+            break
+        case 12:
+            month = 'Dec'
+            break                
+    }
     let dayNumbers = []
+    dayNumbers.push(newdate[2])
+    let day = newdate[2].slice(0, 2)
+    let userJoined = `Joined ${day} ${month} ${year}`
+    dateJoined.innerHTML = userJoined
 }
