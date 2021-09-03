@@ -486,6 +486,14 @@ footer {
 		width: fill-available;
 	}
 
+	form {
+		margin-bottom: 24px;
+	}
+
+	form.error {
+		margin-bottom: 24px;
+	}
+
 	form.error span {
 		left: auto;
 		right: 140px;
