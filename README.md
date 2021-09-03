@@ -1,6 +1,6 @@
 # Github User Search App
 
-- Live website -(https://cpwd-github-user-search-app.netlify.app/4)
+- Live website -(https://cpwd-github-user-search-app.netlify.app)
 
 ## Table of contents
 
