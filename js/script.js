@@ -57,7 +57,7 @@ form.addEventListener('submit', function(e){
         <img src="${data.avatar_url}"/>
         `
         nameMain.innerHTML = data.name
-        userName.innerHTML = `@${data.login}`
+        userName.innerHTML = `<a href="https://github.com/${data.login}" target="_blank"> @${data.login}</a>`
         displayDate(data.created_at)
         // dateJoined.innerHTML = `Joined ${data.created_at}`
         
@@ -89,7 +89,7 @@ form.addEventListener('submit', function(e){
             twitter.innerHTML = 'Not Available'
             twitter.classList.add('unavailable')
         } else {
-            twitter.innerHTML = `@${data.twitter_username}`
+            twitter.innerHTML = `<a href="https://twitter.com/${data.twitter_username}" target="_blank">@${data.twitter_username}</a>`
            twitter.classList.remove('unavailable') 
         }
 
