@@ -11,12 +11,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <title>CPWD | GitHub user search app</title>
 </head>
-<body class="dark">
+<body>
   <header>
     <div class="logo">
       <h1>devfinder</h1>
     </div>
-    <div class="theme">
+    <div class="theme" id="theme">
       <div class="setting">
         <p class="light-setting">Light</p>
         <p class="dark-setting">Dark</p>
@@ -24,7 +24,7 @@
     </div>
   </header>
   <main>
-    <form class="error">
+    <form class="">
       <input type="text" name="username" id="username" placeholder="Search GitHub username...">
       <span>No results</span>
       <img src="assets/icon-search.svg" alt="search">
@@ -32,50 +32,50 @@
     </form>
     <div class="box-wrap">
       <div class="box-header">
-        <div class="profile-picture">
+        <div class="profile-picture" id="profile-picture">
           <img src="https://source.unsplash.com/random/70x70" alt="profile picture">
         </div>
         <div class="user-info">
           <div class="left">
-            <h2>The Octocat</h2>
-          <h3 class="user">@octocat</h3>
+            <h2 id="name">The Octocat</h2>
+          <h3 class="user" id="GitHub-username">@octocat</h3>
           </div>
-          <p class="joined">Joined 25 Jan 2011</p>
+          <p class="joined" id="joined">Joined 25 Jan 2011</p>
         </div>
       </div>
       <div class="bio">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quisquam delectus nostrum.</p>
+        <p id="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quisquam delectus nostrum.</p>
       </div>
       <div class="stats">
         <div class="stat-1">
           <h4>Repos</h4>
-          <div class="stat-num">8</div>
+          <div class="stat-num" id="repo">8</div>
         </div>
         <div class="stat-2">
           <h4>Followers</h4>
-          <div class="stat-num">3938</div>
+          <div class="stat-num" id="followers">3938</div>
         </div>
         <div class="stat-3">
           <h4>Following</h4>
-          <div class="stat-num">9</div>
+          <div class="stat-num" id="following">9</div>
         </div>
       </div>
       <div class="social">
         <div class="link location">
           <div><img src="assets/icon-location.svg" alt="location"></div>
-          <p>San Francisco</p>
+          <p id="location">San Francisco</p>
         </div>
         <div class="link cite">
           <div><img src="assets/icon-website.svg" alt="website"></div>
-          <p>https://github.blog</p>
+          <p id="cite">https://github.blog</p>
         </div>
         <div class="link twitter unavailable">
           <div><img src="assets/icon-twitter.svg" alt="twitter"></div>
-          <p>Not Available</p>
+          <p id="twitter">Not Available</p>
         </div>
         <div class="link company">
           <div><img src="assets/icon-company.svg" alt="company"></div>
-          <p>@github</p>
+          <p id="company">@github</p>
         </div>
       </div>
     </div>

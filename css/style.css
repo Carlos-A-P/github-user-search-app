@@ -71,6 +71,7 @@ header {
 
 .theme:hover {
 	filter: brightness(0%);
+	cursor: pointer;
 }
 
 .setting p {
@@ -170,6 +171,7 @@ form button {
 
 form button:hover {
 	background-color: #60abff;
+	cursor: pointer;
 }
 /* /form */
 
@@ -281,6 +283,10 @@ footer {
 .dark form input,
 .dark .box-wrap {
 	background-color: var(--navy);
+}
+
+.dark form,
+.dark .box-wrap {
 	box-shadow: none;
 }
 
@@ -309,6 +315,10 @@ footer {
 
 .dark .link div {
 	filter: brightness(100);
+}
+
+.dark .theme:hover {
+	filter: invert(80%) sepia(2%) saturate(5658%) hue-rotate(188deg) brightness(4);
 }
 
 /* -------------------/DARK THEME */
