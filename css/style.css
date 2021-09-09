@@ -492,6 +492,11 @@ footer a:visited {
 		max-width: 730px;
 	}
 
+	.box-header {
+		align-items: flex-start;
+		margin-bottom: -25px;
+	}
+
 	.box-wrap {
 		padding: 48px;
 		display: flex;
