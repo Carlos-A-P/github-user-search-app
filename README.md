@@ -55,7 +55,7 @@ form.addEventListener('submit', function(e){
     fetch('https://api.github.com/users/'+originalName)
     .then((result) => result.json())
     .then((data) => {
-        // console.log(data)
+        // adding error if username is unavailable
         if (data.name === undefined){
             form.classList.add('error')
             return
@@ -69,8 +69,8 @@ form.addEventListener('submit', function(e){
         nameMain.innerHTML = data.name
         userName.innerHTML = `@${data.login}`
         displayDate(data.created_at)
-        // dateJoined.innerHTML = `Joined ${data.created_at}`
 
+        // entering information that is available
         if (data.bio === null) {
             bio.innerHTML = 'This profile has no bio'
             bio.classList.add('unavailable')
